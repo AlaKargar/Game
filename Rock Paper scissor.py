@@ -10,7 +10,7 @@ player=""
 scoreUser=0
 scorePlayer=0
 
-for i in range(1,Loop+1):
+for i in range(Loop):
     
     user=input("Please enter your choice: ")
     num=random.randint(1,3)
@@ -21,33 +21,33 @@ for i in range(1,Loop+1):
     elif num == 2:
         player = "Paper"
         print("Player's choice: ", player)
-    elif player == 3: 
+    elif num == 3: 
         player = "Scissor"
         print("Player's choice: ", player)
-
+    
 
     if player == "Rock" and user == "Paper":
         print("You're winner")
-        scoreUser+1
+        scoreUser+=1
     elif player == "Paper" and user == "Paper":
         print("No one is winner")
     elif player == "Scissor" and user == "Paper":
         print("Player is winner")
-        scorePlayer+1
+        scorePlayer +=1
     elif player == "Rock" and user == "Rock": 
         print("No one is winner")
     elif player == "Paper" and user == "Rock": 
         print("Player is winner")
-        scorePlayer+1
+        scorePlayer +=1
     elif player == "Scissor" and user == "Rock": 
         print("You're winner")
-        scoreUser+1
+        scoreUser +=1
     elif player == "Rock" and user == "Scissor": 
         print("Player is winner")
-        scorePlayer+1
+        scorePlayer +1
     elif player == "Paper" and user == "Scissor": 
         print("You're winner")
-        scoreUser+1
+        scoreUser +=1
     elif player == "Scissor" and user == "Scissor": 
         print("No one is winner")
 
@@ -58,6 +58,6 @@ elif scorePlayer > scoreUser:
 else:
     print("In the end no one is winner")
 
-print("Player's score is: {0} ", scorePlayer)
+print("Player's score is: ", scorePlayer)
 print("Your score is: ", scoreUser)
 
